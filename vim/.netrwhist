@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/kaduribeiro/code/agenda/spec/support/page_objects'
+let g:netrw_dirhist_2='/Users/kaduribeiro/code/agenda/app/assets/javascripts'
+let g:netrw_dirhist_3='/Users/kaduribeiro/code/agenda/app/views/restaurant_settings'
+let g:netrw_dirhist_4='/Users/kaduribeiro/code/agenda/spec/fixtures'
+let g:netrw_dirhist_5='/Users/kaduribeiro/code/uniara_virtual_api/lib/endpoints'
+let g:netrw_dirhist_6='/Users/kaduribeiro/code/agenda'
