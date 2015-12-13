@@ -14,5 +14,5 @@ echo "Installing dotfiles..."
 ln -s `pwd`/vimrc ~/.vimrc
 ln -s `pwd`/vim ~/.vim
 
-echo "Instalation finished. enjoy :)"
+echo "Installation finished. enjoy :)"
 
