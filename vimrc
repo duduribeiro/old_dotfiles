@@ -7,6 +7,8 @@ filetype plugin indent on
 :set shiftwidth=2
 :set expandtab
 :set noswapfile
+:set ruler
+:set number
 
 " rainbow_parentheses.vim (highlight parenteses and brackets)
 let g:rbpt_colorpairs = [
@@ -44,3 +46,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " close vim if the only left window is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" crosshair
+:hi CursorLine   cterm=NONE ctermbg=237
+:hi CursorColumn cterm=NONE ctermbg=237
+au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
