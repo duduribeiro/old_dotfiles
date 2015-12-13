@@ -2,16 +2,17 @@
 
 # bkp old files
 echo "Backuping old files"
-mv ~/.vim ~/.vim.old 2> /dev/null
-mv ~/.vimrc ~/.vimrc.old 2> /dev/null
+rm -rf ~/.vim.old.df ~/.vimrc.old.df
+mv ~/.vim ~/.vim.old.df 2> /dev/null
+mv ~/.vimrc ~/.vimrc.old.df 2> /dev/null
 
 echo "Fetching vim plugins..."
 git submodule init
 git submodule update
 
 echo "Installing dotfiles..."
-cp vimrc ~/.vimrc
-cp -R vim ~/.vim
+ln -s `pwd`/vimrc ~/.vimrc
+ln -s `pwd`/vim ~/.vim
 
-echo "Instalation finished. enjoy :)"
+echo "Installation finished. enjoy :)"
 

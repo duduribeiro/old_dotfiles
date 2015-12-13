@@ -52,3 +52,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 :hi CursorColumn cterm=NONE ctermbg=237
 au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
 au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
+
+"airline
+" smarter tab line
+let g:airline#extensions#tabline#enabled = 1
+:set laststatus=2
