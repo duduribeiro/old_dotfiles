@@ -57,3 +57,9 @@ au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
 " smarter tab line
 let g:airline#extensions#tabline#enabled = 1
 :set laststatus=2
+
+" tags in new tab/vetical split
+" Ctrl+\ open tag in new tab
+" Alt+]  open tag in new vertical split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
