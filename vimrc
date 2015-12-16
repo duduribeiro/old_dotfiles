@@ -48,10 +48,10 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " crosshair
-:hi CursorLine   cterm=NONE ctermbg=237
-:hi CursorColumn cterm=NONE ctermbg=237
-au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
+":hi CursorLine   cterm=NONE ctermbg=237
+":hi CursorColumn cterm=NONE ctermbg=237
+"au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
 
 "airline
 " smarter tab line
