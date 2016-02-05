@@ -65,6 +65,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Alt+]  open tag in new vertical split
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
@@ -75,4 +76,9 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+  " bind K to grep word under cursor
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+  " bind | to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  nnoremap } :Ag<SPACE>
 endif
