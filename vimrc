@@ -13,6 +13,12 @@ filetype plugin indent on
 :set ruler
 :set number
 
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " rainbow_parentheses.vim (highlight parenteses and brackets)
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
