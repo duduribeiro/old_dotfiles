@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-crosshairs"]
 	path = vim/bundle/vim-crosshairs
 	url = https://github.com/bronson/vim-crosshairs.git
+[submodule "vim/bundle/vim-rubocop.git"]
+	path = vim/bundle/vim-rubocop.git
+	url = https://github.com/ngmy/vim-rubocop.git

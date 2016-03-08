@@ -95,3 +95,7 @@ if executable('ag')
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
   nnoremap } :Ag<SPACE>
 endif
+
+" vim-rubocop
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
