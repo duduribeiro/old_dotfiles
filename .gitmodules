@@ -18,7 +18,7 @@
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/bundle/vim-better-whitespace"]
 	path = vim/bundle/vim-better-whitespace
-	url = git://github.com/ntpeters/vim-better-whitespace.git
+	url = https://github.com/ntpeters/vim-better-whitespace.git
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
@@ -31,8 +31,8 @@
 [submodule "vim/bundle/vim-indent-guides"]
 	path = vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim/bundle/vim-colors-solarized.git"]
-	path = vim/bundle/vim-colors-solarized.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-crosshairs"]
 	path = vim/bundle/vim-crosshairs
