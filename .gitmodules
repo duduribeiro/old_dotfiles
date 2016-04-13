@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-rubocop.git"]
 	path = vim/bundle/vim-rubocop.git
 	url = https://github.com/ngmy/vim-rubocop.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
