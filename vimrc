@@ -63,10 +63,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
 
 " crosshairs with vim-crosshairs
-highlight CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=black guifg=NONE
-highlight CursorColumn cterm=NONE ctermbg=237 ctermfg=NONE guibg=black guifg=NONE
-:set cursorline    " enable the horizontal line
-:set cursorcolumn  " enable the vertical line
+"highlight CursorLine   cterm=NONE ctermbg=237 ctermfg=NONE guibg=black guifg=NONE
+"highlight CursorColumn cterm=NONE ctermbg=237 ctermfg=NONE guibg=black guifg=NONE
+":set cursorline    " enable the horizontal line
+":set cursorcolumn  " enable the vertical line
+set colorcolumn=120
+
 
 "airline
 " smarter tab line
