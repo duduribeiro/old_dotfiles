@@ -101,3 +101,6 @@ endif
 " vim-rubocop
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
+
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
