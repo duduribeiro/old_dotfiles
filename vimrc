@@ -1,8 +1,12 @@
 execute pathogen#infect()
 syntax on
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" Theme setup (choose one)
+""" Solarized
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
+""" Seti (default)
+colorschem seti
 filetype plugin indent on
 
 " tab with 2 spaces
