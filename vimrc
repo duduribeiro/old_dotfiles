@@ -9,6 +9,9 @@ syntax on
 colorschem seti
 filetype plugin indent on
 
+" Change the leader key to be `,`
+let mapleader = ","
+
 " tab with 2 spaces
 :set tabstop=2
 :set shiftwidth=2
