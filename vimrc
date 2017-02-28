@@ -1,12 +1,14 @@
 execute pathogen#infect()
 syntax on
+set t_Co=256
 " Theme setup (choose one)
 """ Solarized
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 """ Seti (default)
-colorschem seti
+" colorschem seti
+" Theme setup end
 filetype plugin indent on
 
 " Change the leader key to be `,`
