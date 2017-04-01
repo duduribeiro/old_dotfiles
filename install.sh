@@ -7,8 +7,8 @@ mv ~/.vim ~/.vim.old.df 2> /dev/null
 mv ~/.vimrc ~/.vimrc.old.df 2> /dev/null
 
 echo "Fetching vim plugins..."
-git submodule init
-git submodule update
+# git submodule init
+# git submodule update
 
 echo "Installing dotfiles..."
 ln -s `pwd`/vimrc ~/.vimrc
