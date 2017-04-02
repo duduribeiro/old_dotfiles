@@ -1,3 +1,4 @@
 vim/.vim
 vim/init.vim
 vim/.netrwhist
+vim/plugged/*
