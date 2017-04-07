@@ -2,9 +2,9 @@ call plug#begin()
 
 " Make sure you use single quotes
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'ctrlpvim/ctrlp.vim'
-" Initialize plugin system
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 syntax on
