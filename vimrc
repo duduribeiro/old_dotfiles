@@ -10,9 +10,7 @@ call plug#end()
 syntax on
 
 " tab with 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=2 shiftwidth=2 expandtab
 
 " Do not create swapfile
 set noswapfile
