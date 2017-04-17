@@ -4,6 +4,7 @@ call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/base16-vim'
