@@ -5,6 +5,10 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+
+" Ruby specifics
+Plug 'tpope/vim-bundler'
+
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/base16-vim'
@@ -18,6 +22,7 @@ let mapleader = ","
 
 " Leader mappings
 """"""""""""""""""""
+map <leader>bi :!bundle install<cr>
 nmap <leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 """"""""""""""""""""
 
