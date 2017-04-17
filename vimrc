@@ -4,6 +4,9 @@ call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
+" colorschemes
+Plug 'whatyouhide/vim-gotham'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -32,3 +35,7 @@ highlight ColorColumn ctermbg=235
 " Make CtrlP use ag for listing the files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
+
+" Colorscheme (select only one)
+colorscheme gotham " Ensure that you have Gotham theme for your terminal
+" colorscheme base16-eighties
