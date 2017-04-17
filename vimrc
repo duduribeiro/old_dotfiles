@@ -13,6 +13,9 @@ call plug#end()
 
 syntax on
 
+" Use Silver Searcher instead of grep
+set grepprg=ag
+
 " tab with 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
