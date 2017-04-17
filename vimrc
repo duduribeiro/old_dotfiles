@@ -16,6 +16,11 @@ syntax on
 " Map the , key as leader
 let mapleader = ","
 
+" Leader mappings
+""""""""""""""""""""
+nmap <leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+""""""""""""""""""""
+
 " Use Silver Searcher instead of grep
 set grepprg=ag
 
