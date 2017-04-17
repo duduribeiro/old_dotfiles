@@ -13,6 +13,9 @@ call plug#end()
 
 syntax on
 
+" Map the , key as leader
+let mapleader = ","
+
 " Use Silver Searcher instead of grep
 set grepprg=ag
 
