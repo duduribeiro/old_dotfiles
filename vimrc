@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 
 " Ruby specifics
 Plug 'tpope/vim-bundler'
