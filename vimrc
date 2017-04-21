@@ -12,7 +12,7 @@ Plug 'tpope/vim-bundler'
 
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
-Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 call plug#end()
 
@@ -55,5 +55,5 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 " Colorscheme (select only one)
-colorscheme gotham " Ensure that you have Gotham theme for your terminal
-" colorscheme base16-eighties
+" colorscheme gotham " Ensure that you have Gotham theme for your terminal
+colorscheme Tomorrow-Night-Eighties
