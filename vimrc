@@ -10,6 +10,9 @@ Plug 'tpope/vim-fugitive'
 " Ruby specifics
 Plug 'tpope/vim-bundler'
 
+" Elixir specifics
+Plug 'elixir-lang/vim-elixir'
+
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/vim-tomorrow-theme'
@@ -25,6 +28,8 @@ let mapleader = ","
 """"""""""""""""""""
 map <leader>bi :!bundle install<cr>
 nmap <leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 """"""""""""""""""""
 
 " Use Silver Searcher instead of grep
