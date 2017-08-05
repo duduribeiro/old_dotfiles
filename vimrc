@@ -10,6 +10,9 @@ Plug 'tpope/vim-fugitive'
 " Ruby specifics
 Plug 'tpope/vim-bundler'
 
+" Slim template
+Plug 'slim-template/vim-slim'
+
 " Elixir specifics
 Plug 'elixir-lang/vim-elixir'
 
