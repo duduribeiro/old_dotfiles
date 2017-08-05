@@ -16,6 +16,9 @@ Plug 'slim-template/vim-slim'
 " Elixir specifics
 Plug 'elixir-lang/vim-elixir'
 
+" Vim-tmux support
+Plug 'christoomey/vim-tmux-navigator'
+
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/vim-tomorrow-theme'
