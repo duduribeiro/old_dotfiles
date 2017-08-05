@@ -22,6 +22,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
