@@ -37,6 +37,12 @@ map <leader>bi :!bundle install<cr>
 nmap <leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 """"""""""""""""""""
 
 " Use Silver Searcher instead of grep
