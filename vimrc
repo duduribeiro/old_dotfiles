@@ -5,14 +5,23 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'kana/vim-textobj-user'
+Plug 'scrooloose/nerdtree'
+Plug 'ddrscott/vim-side-search'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
 " Ruby specifics
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-bundler'
 Plug 'thoughtbot/vim-rspec'
 Plug 't9md/vim-ruby-xmpfilter'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-rails'
 
 " Slim template
 Plug 'slim-template/vim-slim'
@@ -28,6 +37,9 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 
 " Todo
 Plug 'vitalk/vim-simple-todo'
@@ -36,6 +48,13 @@ call plug#end()
 
 syntax on
 
+" Colorscheme (select only one)
+" colorscheme gotham256 " Ensure that you have Gotham theme for your terminal
+" colorscheme base16-mocha
+" colorscheme Tomorrow-Night-Eighties
+set termguicolors
+let g:gruvbox_italic=1
+colorscheme gruvbox " OceanicNext
 " Map the , key as leader
 let mapleader = ","
 
@@ -56,11 +75,22 @@ nnoremap <C-l> <C-w>l
 " Use Silver Searcher instead of grep
 set grepprg=ag
 
+set relativenumber
+set ignorecase
+set incsearch
+set cursorline
+set showmatch
+set nocompatible
+
+
 " tab with 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
 " Do not create swapfile
 set noswapfile
+
+set splitright
+set splitbelow
 
 set ruler
 set number
@@ -79,10 +109,6 @@ highlight ColorColumn ctermbg=235
 " Make CtrlP use ag for listing the files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
-
-" Colorscheme (select only one)
-" colorscheme gotham " Ensure that you have Gotham theme for your terminal
-colorscheme Tomorrow-Night-Eighties
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
@@ -103,7 +129,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = 'call VtrSendCommand("rspec {spec}")'
+" let g:rspec_command = 'call VtrSendCommand("rspec {spec}")'
 
 " Enable seeing-is-believing mappings only for Ruby
 let g:xmpfilter_cmd = "seeing_is_believing"
@@ -121,6 +147,38 @@ autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
 autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
 
 runtime macros/matchit.vim
+
+let g:side_search_prg = 'ag --word-regexp'
+  \. " --heading --stats -B 1 -A 4"
+
+" Can use `vnew` or `new`
+let g:side_search_splitter = 'vnew'
+
+" 20% splits
+let g:side_search_split_pct = 0.2
+
+" SideSearch current word and return to original window
+nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
+
+" Create an shorter `SS` command
+command! -complete=file -nargs=+ SS execute 'SideSearch <args>'
+
+" Resize split
+nnoremap <leader>h :vertical resize +15<cr>
+nnoremap <leader>l :vertical resize -15<cr>
+nnoremap <leader>j :resize +15<cr>
+nnoremap <leader>k :resize -15<cr>
+
+" Setup Airline
+let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_theme='gruvbox' " oceanicnext
+let g:airline_powerline_fonts = 1
+let g:airline_section_b = ''
+
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+
+highlight LineNr ctermfg=darkgrey ctermbg=None
 
 if $TMUX == ''
   set clipboard+=unnamed
