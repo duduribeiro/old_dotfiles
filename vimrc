@@ -48,13 +48,15 @@ call plug#end()
 
 syntax on
 
-" Colorscheme (select only one)
-" colorscheme gotham256 " Ensure that you have Gotham theme for your terminal
-" colorscheme base16-mocha
-" colorscheme Tomorrow-Night-Eighties
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme gruvbox " OceanicNext
+set background=dark
+" Colorscheme (select only one)
+" colorscheme gotham " Ensure that you have Gotham theme for your terminal
+" colorscheme base16-mocha
+" colorscheme Tomorrow-Night-Eighties
+colorscheme gruvbox
+
 " Map the , key as leader
 let mapleader = ","
 
@@ -170,8 +172,10 @@ nnoremap <leader>j :resize +15<cr>
 nnoremap <leader>k :resize -15<cr>
 
 " Setup Airline
-let g:airline#extensions#tmuxline#enabled = 0
-let g:airline_theme='gruvbox' " oceanicnext
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 1
+let g:airline_theme='gruvbox'
+" let g:airline_theme='gotham'
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 
