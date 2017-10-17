@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ddrscott/vim-side-search'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'rizzatti/dash.vim'
 
 " Ruby specifics
 Plug 'vim-ruby/vim-ruby'
