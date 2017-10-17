@@ -19,7 +19,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-bundler'
-Plug 'thoughtbot/vim-rspec'
+"Plug 'thoughtbot/vim-rspec'
+Plug 'skalnik/vim-vroom'
 Plug 't9md/vim-ruby-xmpfilter'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-rails'
@@ -67,6 +68,8 @@ map <leader>bi :!bundle install<cr>
 nmap <leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+
+map <leader>L :VroomRunLastTest<cr>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j
@@ -128,10 +131,10 @@ nnoremap <leader>fr :VtrFocusRunner<cr>
 nnoremap <leader>q :VtrSendCommandToRunner q<cr>
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+"map <Leader>t :call RunCurrentSpecFile()<CR>
+"map <Leader>s :call RunNearestSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
 " let g:rspec_command = 'call VtrSendCommand("rspec {spec}")'
 
 " Enable seeing-is-believing mappings only for Ruby
