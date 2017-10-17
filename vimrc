@@ -35,6 +35,9 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 
+" Coffeescript
+Plug 'kchmck/vim-coffee-script'
+
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
 Plug 'chriskempson/vim-tomorrow-theme'
