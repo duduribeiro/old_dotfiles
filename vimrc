@@ -24,6 +24,7 @@ Plug 'skalnik/vim-vroom'
 Plug 't9md/vim-ruby-xmpfilter'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-rails'
+Plug 'sunaku/vim-ruby-minitest'
 
 " Slim template
 Plug 'slim-template/vim-slim'
@@ -37,6 +38,13 @@ Plug 'christoomey/vim-tmux-runner'
 
 " Coffeescript
 Plug 'kchmck/vim-coffee-script'
+
+" Dependencies of snipmate
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
+
+Plug 'garbas/vim-snipmate'
 
 " colorschemes
 Plug 'whatyouhide/vim-gotham'
@@ -59,7 +67,7 @@ set background=dark
 " Colorscheme (select only one)
 " colorscheme gotham " Ensure that you have Gotham theme for your terminal
 " colorscheme base16-mocha
-" colorscheme Tomorrow-Night-Eighties
+"  colorscheme Tomorrow-Night-Eighties
 colorscheme gruvbox
 
 " Map the , key as leader
@@ -114,6 +122,11 @@ noremap <Right> <NOP>
 set colorcolumn=120
 highlight ColorColumn ctermbg=235
 
+" Enable filetype detection
+filetype on
+filetype indent on
+filetype plugin on
+
 " Ctrlp
 " Make CtrlP use ag for listing the files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -143,9 +156,16 @@ nnoremap <leader>q :VtrSendCommandToRunner q<cr>
 " Enable seeing-is-believing mappings only for Ruby
 let g:xmpfilter_cmd = "seeing_is_believing"
 
+autocmd FileType ruby compiler ruby
 autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing_is_believing-mark)
 autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing_is_believing-mark)
 autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+" Make ?s part of words
+autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
 
 autocmd FileType ruby nmap <buffer> <F6> <Plug>(seeing_is_believing-clean)
 autocmd FileType ruby xmap <buffer> <F6> <Plug>(seeing_is_believing-clean)
