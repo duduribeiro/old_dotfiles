@@ -37,5 +37,5 @@ set -g status-left "#[fg=colour0,bg=colour12] #S #[fg=colour12,bg=colour0]"
 set -g status-right "#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236] #(tmux-spotify-info) #(battery -t) #{prefix_highlight} #[fg=colour7,bg=colour0]#[fg=colour0,bg=colour7]  %a  %h %d  %H:%M #[fg=colour0,bg=colour7]#[fg=colour4,bg=colour0]#[fg=colour0,bg=colour4] #h #[fg=colour4,bg=colour4] "
 setw -g window-status-format "#[fg=colour0,bg=colour7]#[fg=colour0,bg=colour7] #I #[fg=colour0,bg=colour7] #W #[fg=colour7,bg=colour0]"
 
-setw -g window-status-current-format "#[fg=colour0,bg=colour10]#[fg=colour0,bg=colour10] #I #[fg=colour0,bg=colour10] #W #[fg=colour10,bg=colour0]"
+setw -g window-status-current-format "#[fg=colour0,bg=colour10]#[fg=colour0,bg=colour10] #I #{?window_zoomed_flag,#[fg=red] Z,} #[fg=colour0,bg=colour10] #W #[fg=colour10,bg=colour0]"
 
