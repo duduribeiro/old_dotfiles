@@ -17,6 +17,7 @@ ln -s `pwd`/vim ~/.vim
 
 # links for neovim
 ln -s ~/.vim ~/.config/nvim
+rm ~/.config/nvim/init.vim 2> /dev/null
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 echo "Installation finished. enjoy :)"
