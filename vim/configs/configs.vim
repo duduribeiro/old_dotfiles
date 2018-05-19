@@ -1,3 +1,19 @@
+" Enable syntax highlight
+syntax on
+" Display relative line numbers
+set relativenumber
+" Ignore case when searching
+set ignorecase
+" Activate incrementar search
+set incsearch
+" Highlight the line containing the cursor
+set cursorline
+" Displays the matching opening brackets when inserting the close one.
+set showmatch
+
+" Use Silver Searcher instead of grep
+set grepprg=ag
+
 " Do not create swapfile
 set noswapfile
 

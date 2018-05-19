@@ -7,8 +7,9 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
+Plug 'mhinz/vim-startify'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme
 " Plug 'KeitaNakamura/neodark.vim'
