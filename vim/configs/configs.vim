@@ -15,6 +15,7 @@ set termguicolors
 
 let g:gruvbox_italic=1
 set background=dark
+set t_Co=256
 colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
