@@ -30,6 +30,8 @@ let g:gruvbox_italic=1
 set background=dark
 set t_Co=256
 colorscheme gruvbox
+let g:gruvbox_vert_split = 'bg1'
+let g:gruvbox_sign_column = 'bg0'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -41,6 +43,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ALE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'ruby': ['rubocop'],
+\}
+let g:ale_fix_on_save = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX

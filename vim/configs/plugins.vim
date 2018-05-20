@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
