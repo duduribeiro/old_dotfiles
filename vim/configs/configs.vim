@@ -10,13 +10,10 @@ set incsearch
 set cursorline
 " Displays the matching opening brackets when inserting the close one.
 set showmatch
-
 " Use Silver Searcher instead of grep
 set grepprg=ag
-
 " Do not create swapfile
 set noswapfile
-
 " Tab with 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
@@ -70,3 +67,11 @@ elseif has("unix")
   let &t_SR = "\<Esc>[4 q"
   let &t_EI = "\<Esc>[2 q"
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldlevelstart=50 " Files open expanded
+set foldmethod=indent " Use decent folding
+" Toggles folding with space
+nnoremap <Space> za
