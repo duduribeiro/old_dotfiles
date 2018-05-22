@@ -128,3 +128,7 @@ set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 " Toggles folding with space
 nnoremap <Space> za
+" Runs bundle install with ,bi
+noremap <leader>bi :!bundle install<cr>
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
