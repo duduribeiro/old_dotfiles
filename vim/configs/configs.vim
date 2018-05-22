@@ -22,7 +22,7 @@ runtime macros/matchit.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors
+"set termguicolors
 
 "let g:neodark#use_256color = 1
 "let g:neodark#terminal_transparent = 1
