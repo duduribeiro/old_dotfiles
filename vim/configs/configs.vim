@@ -54,11 +54,31 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ALE
+" FZF
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"t Ctrl+n
+nmap <silent> t<C-n> :TestNearest<CR>
+"t Ctrl+f
+nmap <silent> t<C-f> :TestFile<CR>
+"t Ctrl+s
+nmap <silent> t<C-s> :TestSuite<CR>
+"t Ctrl+l
+nmap <silent> t<C-l> :TestLast<CR>
+"t Ctrl+g
+nmap <silent> t<C-g> :TestVisit<CR>
+let g:test#preserve_screen = 1
+
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+  let test#strategy = "neovim"
+end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX

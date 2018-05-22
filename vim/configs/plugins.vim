@@ -10,6 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ryanoasis/vim-devicons'
 
