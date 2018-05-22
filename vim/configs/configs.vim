@@ -100,6 +100,22 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 nnoremap <leader>p :Goyo<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Window Resize and Zoom
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>z :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" resize
+nnoremap <leader>h :vertical resize +15<cr>
+nnoremap <leader>l :vertical resize -15<cr>
+nnoremap <leader>j :resize +15<cr>
+nnoremap <leader>k :resize -15<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if $TMUX == ''
