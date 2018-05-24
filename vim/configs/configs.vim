@@ -2,6 +2,8 @@
 syntax on
 " Display relative line numbers
 set relativenumber
+" display the line number
+set nu
 " Ignore case when searching
 set ignorecase
 " Activate incrementar search
@@ -45,6 +47,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
+" map
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -53,7 +58,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'ruby': ['rubocop'],
 \}
-let g:ale_fix_on_save = 1
+"let g:ale_fix_on_save = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
