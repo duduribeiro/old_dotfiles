@@ -30,6 +30,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme
