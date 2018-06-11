@@ -31,6 +31,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'haya14busa/incsearch.vim'
+Plug 'metakirby5/codi.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme

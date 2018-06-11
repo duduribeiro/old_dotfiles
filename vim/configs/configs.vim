@@ -66,9 +66,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 
-" map
-nmap <silent> <Leader>n :NERDTreeToggle<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
