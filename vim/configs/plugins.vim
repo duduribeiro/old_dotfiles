@@ -8,6 +8,8 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'hashivim/vim-terraform'
+Plug 'pearofducks/ansible-vim'
 Plug 'docunext/closetag.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kana/vim-textobj-user'
@@ -33,5 +35,6 @@ Plug 'ryanoasis/vim-devicons'
 " Colorscheme
 " Plug 'KeitaNakamura/neodark.vim'
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()

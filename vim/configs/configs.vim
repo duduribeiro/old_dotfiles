@@ -23,19 +23,38 @@ runtime macros/matchit.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set termguicolors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 "let g:neodark#use_256color = 1
 "let g:neodark#terminal_transparent = 1
 "colorscheme neodark
 
-let g:gruvbox_italic=1
-set background=dark
+"""Gruvbox
+"let g:gruvbox_italic=1
+"set background=dark
+"set t_Co=256
+"colorscheme gruvbox
+"let g:gruvbox_vert_split = 'bg1'
+"let g:gruvbox_sign_column = 'bg0'
+
+"""base16-eighties
 set t_Co=256
-colorscheme gruvbox
-let g:gruvbox_vert_split = 'bg1'
-let g:gruvbox_sign_column = 'bg0'
+let base16colorspace=256
+colorscheme base16-eighties
+" makes the current line color blue
+hi CursorLineNr ctermfg=20 ctermbg=18 gui=bold guifg=#43a5d5 guibg=#393939
+
+"""base16-tomorrow
+"set t_Co=256
+"let base16colorspace=256
+"colorscheme base16-tomorrow
+
+"""base16-tomorrow
+"set t_Co=256
+"let base16colorspace=256
+"colorscheme base16-tomorrow-night
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -80,11 +99,11 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 "t Ctrl+g
 nmap <silent> t<C-g> :TestVisit<CR>
-let g:test#preserve_screen = 1
+"let g:test#preserve_screen = 1
 
 if has('nvim')
   tmap <C-o> <C-\><C-n>
-  let test#strategy = "neovim"
+  "let test#strategy = "neovim"
 end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,6 +122,9 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 " Goyo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>p :Goyo<CR>
+" Width
+let g:goyo_width = 120
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window Resize and Zoom
@@ -124,6 +146,12 @@ nnoremap <leader>k :resize -15<cr>
 " Vim multiple cursors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_select_all_key = '<C-a>'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-terraform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:terraform_align=1
+autocmd FileType terraform setlocal commentstring=#%s
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX
