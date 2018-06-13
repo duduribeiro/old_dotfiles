@@ -13,3 +13,10 @@ runtime configs/keyboard.vim
 " Configurations file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 runtime configs/configs.vim
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load custom configurations
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if !empty(glob("~/.vimrc.custom"))
+  source ~/.vimrc.custom
+endif
