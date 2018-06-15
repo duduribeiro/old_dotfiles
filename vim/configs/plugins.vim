@@ -33,6 +33,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'haya14busa/incsearch.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'Raimondi/delimitMate'
 Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme
