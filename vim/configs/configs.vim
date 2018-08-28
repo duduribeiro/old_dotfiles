@@ -98,9 +98,11 @@ nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 "let g:test#preserve_screen = 1
 
+let test#strategy = 'vimux'
+
 if has('nvim')
   tmap <C-o> <C-\><C-n>
-  "let test#strategy = "neovim"
+  let test#strategy = "neovim"
 end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -200,3 +202,19 @@ nnoremap <Space> za
 noremap <leader>bi :!bundle install<cr>
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Seeing is believing with xmpfilter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable seeing-is-believing mappings only for Ruby
+let g:xmpfilter_cmd = "seeing_is_believing"
+autocmd FileType ruby nmap <buffer> <F4> <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby xmap <buffer> <F4> <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby imap <buffer> <F4> <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby nmap <buffer> <F6> <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby xmap <buffer> <F6> <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby imap <buffer> <F6> <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
+autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
+autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
+
