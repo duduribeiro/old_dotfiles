@@ -43,6 +43,7 @@ set termguicolors
 set t_Co=256
 let base16colorspace=256
 colorscheme base16-eighties
+" colorscheme base16-atelier-cave-light  " light-theme
 " makes the current line color blue
 hi CursorLineNr ctermfg=20 ctermbg=18 gui=bold guifg=#43a5d5 guibg=#393939
 
@@ -101,8 +102,8 @@ nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = 'vimux'
 
 if has('nvim')
-  tmap <C-o> <C-\><C-n>
   let test#strategy = "neovim"
+  tmap <C-o> <C-\><C-n>
 end
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
