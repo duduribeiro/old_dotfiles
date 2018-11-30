@@ -24,28 +24,25 @@ runtime macros/matchit.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set termguicolors
+" set termguicolors
 
+" Neodark
 "let g:neodark#use_256color = 1
 "let g:neodark#terminal_transparent = 1
 "colorscheme neodark
 
 """Gruvbox
-"let g:gruvbox_italic=1
-"set background=dark
-"set t_Co=256
+"set background=light
+"let g:gruvbox_contrast_light = 'dark'
 "colorscheme gruvbox
-"let g:gruvbox_vert_split = 'bg1'
-"let g:gruvbox_sign_column = 'bg0'
 
 """base16-eighties
-set t_Co=256
-let base16colorspace=256
-colorscheme base16-eighties
+" set t_Co=256
+" let base16colorspace=256
+" colorscheme base16-eighties
 " colorscheme base16-atelier-cave-light  " light-theme
 " makes the current line color blue
-hi CursorLineNr ctermfg=20 ctermbg=18 gui=bold guifg=#43a5d5 guibg=#393939
+" hi CursorLineNr ctermfg=20 ctermbg=18 gui=bold guifg=#43a5d5 guibg=#393939
 
 """base16-tomorrow
 "set t_Co=256
@@ -56,6 +53,16 @@ hi CursorLineNr ctermfg=20 ctermbg=18 gui=bold guifg=#43a5d5 guibg=#393939
 "set t_Co=256
 "let base16colorspace=256
 "colorscheme base16-tomorrow-night
+
+""" OneHalf
+set t_Co=256
+set cursorline
+colorscheme onehalflight
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -156,8 +163,8 @@ autocmd FileType terraform setlocal commentstring=#%s
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if $TMUX == ''
-  set clipboard+=unnamed
+if $TMUX != ''
+  set clipboard=unnamed
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -191,6 +198,8 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+" lightline
+let g:lightline.colorscheme='onehalfdark'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

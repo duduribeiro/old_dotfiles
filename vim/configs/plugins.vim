@@ -43,5 +43,7 @@ Plug 't9md/vim-ruby-xmpfilter'
 " Plug 'KeitaNakamura/neodark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
+Plug 'nelstrom/vim-mac-classic-theme'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 call plug#end()
