@@ -55,14 +55,23 @@ runtime macros/matchit.vim
 "colorscheme base16-tomorrow-night
 
 """ OneHalf
-set t_Co=256
-set cursorline
-colorscheme onehalflight
+" set t_Co=256
+" set cursorline
+" colorscheme onehalflight
 if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+  " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  " set termguicolors
 endif
+
+""" OneDark """
+colorscheme onehalfdark
+
+" Runs bundle install with ,bi
+noremap <leader>bi :!bundle install<cr>
+
+" puts the caller with WTF
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -164,8 +173,9 @@ autocmd FileType terraform setlocal commentstring=#%s
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config to work nice with TMUX
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard+=unnamedplus
 if $TMUX != ''
-  set clipboard=unnamed
+  " set clipboard=unnamed
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -199,8 +209,10 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-" lightline
 let g:lightline.colorscheme='onehalfdark'
+" -- INSERT -- is unnecessary anymore because the mode information is displayed in the statusline. 
+set noshowmode
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,10 +221,6 @@ set foldlevelstart=50 " Files open expanded
 set foldmethod=indent " Use decent folding
 " Toggles folding with space
 nnoremap <Space> za
-" Runs bundle install with ,bi
-noremap <leader>bi :!bundle install<cr>
-" puts the caller
-nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Seeing is believing with xmpfilter
@@ -238,9 +246,24 @@ let g:LanguageClient_serverCommands = {
     \ 'ruby': ['tcp://localhost:7658']
     \ }
 
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <F3> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocomplete
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tell the language client to use the default IP and port
+" that Solargraph runs on
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['tcp://localhost:7658']
+    \ }
+
+" Don't send a stop signal to the server when exiting vim.
+" This is optional, but I don't like having to restart Solargraph
+" every time I restart vim.
+let g:LanguageClient_autoStop = 0
+
+" Configure ruby omni-completion to use the language client:
 autocmd FileType ruby setlocal omnifunc=LanguageClient#complete
