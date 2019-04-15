@@ -14,8 +14,10 @@ Plug 'tpope/vim-commentary' " for comments
 Plug 'alvan/vim-closetag' " auto close HTML tags
 Plug 'tpope/vim-endwise' " wisely add 'end' in ruby
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " automatically toggle between relative/nonrelative number
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 
 " Distraction free mode
 Plug 'junegunn/goyo.vim'
@@ -36,10 +38,6 @@ Plug 'metakirby5/codi.vim'
 " Navigation with Tmux
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 
 " Plug 'tpope/vim-rake'
 " Plug 'tpope/vim-dispatch'

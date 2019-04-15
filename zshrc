@@ -118,7 +118,12 @@ export FZF_DEFAULT_COMMAND="ag --follow --nocolor --nogroup -g ''"
 alias delete_old_branches=git branch --merged | grep -v "\*" | grep -v master | grep -v staging | xargs -n 1 git branch -d
 alias mspec=git diff --name-only --diff-filter=AMR origin/master  | grep _spec.rb | xargs rspec
 alias vim=nvim
+alias composer="php /usr/local/bin/composer.phar"
 
 # Load custom environment variables
 test -f ~/.envs && source ~/.envs
 
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
+export PATH="$HOME/.symfony/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libiconv/lib"
+export CPPFLAGS="-I/usr/local/opt/libiconv/include"
