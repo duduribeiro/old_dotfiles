@@ -18,6 +18,8 @@ Plug 'tpope/vim-surround'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+Plug 'posva/vim-vue'
+Plug 'slashmili/alchemist.vim'
 
 " Distraction free mode
 Plug 'junegunn/goyo.vim'
@@ -38,15 +40,27 @@ Plug 'metakirby5/codi.vim'
 " Navigation with Tmux
 Plug 'christoomey/vim-tmux-navigator'
 
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}" Plug 'tpope/vim-rake'
 
-" Plug 'tpope/vim-rake'
+" Snipets
+Plug 'honza/vim-snippets'
+
+" Ctags
+Plug 'ludovicchabant/vim-gutentags'
+
+" Code Runner
+Plug 'xianzhon/vim-code-runner'
+
+" Linter
+Plug 'vim-syntastic/syntastic'
+
 " Plug 'tpope/vim-dispatch'
 " Plug 'benmills/vimux'
 " Plug 'hashivim/vim-terraform'
 " Plug 'pearofducks/ansible-vim'
 " Plug 'kana/vim-textobj-user'
 " Plug 'nelstrom/vim-textobj-rubyblock'
-" Plug 'honza/vim-snippets'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'w0rp/ale'
 " Plug 'terryma/vim-multiple-cursors'
@@ -71,5 +85,6 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'nelstrom/vim-mac-classic-theme'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim' 
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()

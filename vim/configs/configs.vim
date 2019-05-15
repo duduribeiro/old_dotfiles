@@ -66,6 +66,15 @@ endif
 
 """ OneDark """
 colorscheme onehalfdark
+set termguicolors
+" colorscheme onedark
+" set bg=dark
+
+"""" Solarized Light """"
+" let g:solarized_termcolors=256
+" set background=light
+" colorscheme solarized
+
 
 " Runs bundle install with ,bi
 noremap <leader>bi :!bundle install<cr>
@@ -237,16 +246,37 @@ autocmd FileType ruby nmap <buffer> <F5> <Plug>(seeing_is_believing-run)
 autocmd FileType ruby xmap <buffer> <F5> <Plug>(seeing_is_believing-run)
 autocmd FileType ruby imap <buffer> <F5> <Plug>(seeing_is_believing-run)
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-code-runner
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><leader>b <plug>CodeRunner
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" LanguageClient with Solargraph for ruby
+" vim-syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:LanguageClient_autoStop = 0
-let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['tcp://localhost:7658']
-    \ }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-nnoremap <F3> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
